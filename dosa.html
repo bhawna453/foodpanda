@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <style>
+    #burger {
+      display: grid;
+      justify-content: center;
+
+    }
+
+    #d1 {
+      display: flex;
+    }
+
+    #d2 {
+      display: flex;
+    }
+
+    #d3 {
+      display: flex;
+    }
+
+    .com {
+      display: none;
+    }
+
+    img {
+      border-radius: 5%;
+      height: 200px;
+      width: 250px;
+    }
+
+    #b1 {
+      margin-right: 20px;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      border: 2px solid black;
+      border-radius: 5%;
+    }
+
+    #b2 {
+      background-color: white;
+      color: black;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      border: 2px solid black;
+      border-radius: 5%;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    #b3 {
+      background-color: white;
+      color: black;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      border: 2px solid black;
+      border-radius: 5%;
+      margin-left: 20px;
+    }
+
+    #b4 {
+      background-color: white;
+      color: black;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      border: 2px solid black;
+      border-radius: 5%;
+      margin-right: 20px;
+      margin-top: 40px;
+    }
+
+    #b5 {
+      background-color: white;
+      color: black;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      border: 2px solid black;
+      border-radius: 5%;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 40px;
+    }
+
+    #b6 {
+      background-color: white;
+      color: black;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      border: 2px solid black;
+      border-radius: 5%;
+      margin-left: 20px;
+      margin-top: 40px;
+    }
+
+    #button1 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+    #button2 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+    #button3 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+
+    #button4 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+    #button5 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+    #button6 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+
+    #ab {
+      height: 20px;
+      width: 300px;
+      border-radius: 20px;
+      background-color: black;
+    }
+
+    #ab1 {
+      height: 20px;
+      width: 170px;
+      background-color: yellow;
+      border-radius: 20px;
+      margin-left: 0px 0px;
+    }
+
+    #ab2 {
+      height: 20px;
+      width: 80px;
+      background-color: yellow;
+      border-radius: 20px;
+      margin-left: 0px 0px;
+    }
+
+    #ab3 {
+      height: 20px;
+      width: 40px;
+      background-color: yellow;
+      border-radius: 20px;
+      margin-left: 0px 0px;
+    }
+
+    #ab4 {
+      height: 20px;
+      width: 20px;
+      background-color: yellow;
+      border-radius: 20px;
+      margin-left: 0px 0px;
+    }
+
+    #ab5 {
+      height: 20px;
+      width: 60px;
+      background-color: yellow;
+      border-radius: 20px;
+      margin-left: 0px 0px;
+    }
+    #h1_b{
+      padding-top: 20px;
+      color: #fb2525;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    @media screen and (max-width:860px) {
+      #burger {
+      display: grid;
+      
+
+    }
+
+    #d1 {
+      display:grid;
+
+
+    }
+
+    #d2 {
+      display: grid;
+
+    }
+
+    #d3 {
+      display: grid;
+
+    }
+
+    .com {
+      display: none;
+    }
+
+    img {
+      border-radius: 5%;
+      height: 150px;
+      width: 200px;
+      justify-content: center;
+      align-content: center;
+    }
+
+    #b1 {
+      margin-top: 20px;
+      margin-left: auto;
+      border: 2px solid black;
+      border-radius: 5%;
+      height: 300px;
+      width: 300px;
+    }
+
+    #b2 {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 5%;
+      margin-top: 20px;
+      height: 300px;
+      width: 300px;
+    }
+
+    #b3 {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 5%;
+      margin-top: 20px;
+      height: 300px;
+      width: 300px;
+    }
+
+    #b4 {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 5%;
+      margin-top: 20px;
+      margin-left: auto;
+      height: 300px;
+      width: 300px;
+    }
+
+    #b5 {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 5%;
+      margin-top: 20px;
+      height: 300px;
+      width: 300px;
+    }
+
+    #b6 {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 5%;
+      margin-top: 20px;
+      height: 300px;
+      width: 300px;
+    }
+
+    #button1 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+    #button2 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+    #button3 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+
+    #button4 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+    #button5 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+    #button6 {
+      border: none;
+      outline: none;
+      height: 40px;
+      background: #fb2525;
+      color: #fff;
+      font-size: 18px;
+      width: 200px;
+      border-radius: 20px;
+    }
+
+    #ab {
+      height: 20px;
+      width: 200px;
+      border-radius: 20px;
+      background-color: black;
+    }
+
+    #ab1 {
+      height: 20px;
+      width: 70px;
+      background-color: yellow;
+      border-radius: 20px;
+      margin-left: 0px 0px;
+    }
+
+    #ab2 {
+      height: 20px;
+      width: 80px;
+      background-color: yellow;
+      border-radius: 20px;
+      margin-left: 0px 0px;
+    }
+
+    #ab3 {
+      height: 20px;
+      width: 40px;
+      background-color: yellow;
+      border-radius: 20px;
+      margin-left: 0px 0px;
+    }
+
+    #ab4 {
+      height: 20px;
+      width: 20px;
+      background-color: yellow;
+      border-radius: 20px;
+      margin-left: 0px 0px;
+    }
+
+    #ab5 {
+      height: 20px;
+      width: 60px;
+      background-color: yellow;
+      border-radius: 20px;
+      margin-left: 0px 0px;
+    }
+    #h1_b{
+      padding-top: 20px;
+      color: #fb2525;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    } 
+    }
+  </style>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <script>
+    var count = 1;
+    $(document).ready(function () {
+      $("#button1").click(function () {
+        if (count == 1) {
+          alert("your product has been added to cart")
+          count++
+        }
+        else { alert("already added to cart") }
+
+
+      })
+
+    })
+    var count = 1;
+    $(document).ready(function () {
+      $("#button2").click(function () {
+        if (count == 1) {
+          alert("your product has been added to cart")
+          count++
+        }
+        else { alert("already added to cart") }
+
+
+      })
+
+    })
+    var count = 1;
+    $(document).ready(function () {
+      $("#button3").click(function () {
+        if (count == 1) {
+          alert("your product has been added to cart")
+          count++
+        }
+        else { alert("already added to cart") }
+
+
+      })
+
+    })
+    var count = 1;
+    $(document).ready(function () {
+      $("#button4").click(function () {
+        if (count == 1) {
+          alert("your product has been added to cart")
+          count++
+        }
+        else { alert("already added to cart") }
+
+
+      })
+
+    })
+    var count = 1;
+    $(document).ready(function () {
+      $("#button5").click(function () {
+        if (count == 1) {
+          alert("your product has been added to cart")
+          count++
+        }
+        else { alert("already added to cart") }
+
+
+      })
+
+    })
+    var count = 1;
+    $(document).ready(function () {
+      $("#button6").click(function () {
+        if (count == 1) {
+          alert("your product has been added to cart")
+          count++
+        }
+        else { alert("already added to cart") }
+
+
+      })
+
+    })
+    
+    
+    
+  </script>
+</head>
+
+<body>
+  <section id="burgers">
+    <h1 align="center" id="h1_b">
+     Dosa's
+    </h1>
+    <div id="burger">
+      <section id="s1">
+        <div id="d1">
+          <div id="b1">
+            <img src="d1.webp">
+            <h3>Masala Dosa</h3>
+            <h3>₹ <del style="color: red;">150</del> <span></span> 100</h3>
+            <!-- MODAL -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <b>4.2 </b> <i class="fa fa-star" style="color:#f7e305"></i>
+            </button>
+  
+  
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ratings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+  
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:grey;"></i>
+  
+                    </svg> <b>4.2 out of 5</b>
+                    <p>34,294 Global Ratings</p>
+                    5 star
+                    <div id="ab">
+                      <div id="ab1"></div>
+                    </div>
+                    4 star
+                    <div id="ab">
+                      <div id="ab2"></div>
+                    </div>
+                    3 star
+                    <div id="ab">
+                      <div id="ab3"></div>
+                    </div>
+                    2 star
+                    <div id="ab">
+                      <div id="ab4"></div>
+                    </div>
+                    1 star
+                    <div id="ab">
+                      <div id="ab5"></div>
+                    </div>
+  
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </button>
+            <button type="submit" id="button1"><i class="fas fa-shopping-cart"></i></svg> Add to Cart</button>
+          </div>
+          <div id="b2">
+            <img src="d2.jpeg">
+            <h3> Kachipuram Dosa</h3>
+            <h3>₹ <del style="color: red;">280</del> <span></span> 260</h3>
+            <!-- MODAL -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <b>4.2 </b> <i class="fa fa-star" style="color:#f7e305"></i>
+            </button>
+  
+  
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ratings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+  
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:grey;"></i>
+  
+                    </svg> <b>4.2 out of 5</b>
+                    <p>34,294 Global Ratings</p>
+                    5 star
+                    <div id="ab">
+                      <div id="ab1"></div>
+                    </div>
+                    4 star
+                    <div id="ab">
+                      <div id="ab2"></div>
+                    </div>
+                    3 star
+                    <div id="ab">
+                      <div id="ab3"></div>
+                    </div>
+                    2 star
+                    <div id="ab">
+                      <div id="ab4"></div>
+                    </div>
+                    1 star
+                    <div id="ab">
+                      <div id="ab5"></div>
+                    </div>
+  
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+  
+              </button>
+  
+            </div>
+            <button type="submit" id="button2"><i class="fas fa-shopping-cart"></i></svg> Add to Cart</button>
+          </div>
+          <div id="b3">
+            <img src="d3.jpeg">
+            <h3>Mixed Veg Dosa</h3>
+            <h3>₹ <del style="color: red;">250</del> <span></span> 230</h3>
+            <!-- MODAL -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <b>4.2 </b> <i class="fa fa-star" style="color:#f7e305"></i>
+            </button>
+  
+  
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ratings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+  
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:grey;"></i>
+  
+                    </svg> <b>4.2 out of 5</b>
+                    <p>34,294 Global Ratings</p>
+                    5 star
+                    <div id="ab">
+                      <div id="ab1"></div>
+                    </div>
+                    4 star
+                    <div id="ab">
+                      <div id="ab2"></div>
+                    </div>
+                    3 star
+                    <div id="ab">
+                      <div id="ab3"></div>
+                    </div>
+                    2 star
+                    <div id="ab">
+                      <div id="ab4"></div>
+                    </div>
+                    1 star
+                    <div id="ab">
+                      <div id="ab5"></div>
+                    </div>
+  
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+  
+              </button>
+  
+            </div>
+            <button type="submit" id="button3"><i class="fas fa-shopping-cart"></i></svg> Add to Cart</button>
+          </div>
+      </section>
+      <section id="s2">
+        <div id="d2">
+          <div id="b4">
+            <img src="d4.jpeg">
+            <h3> Oats Dosa</h3>
+            <h3>₹ <del style="color: red;">200</del> <span></span> 189</h3>
+            <!-- MODAL -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <b>4.2 </b> <i class="fa fa-star" style="color:#f7e305"></i>
+            </button>
+  
+  
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ratings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+  
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:grey;"></i>
+  
+                    </svg> <b>4.2 out of 5</b>
+                    <p>34,294 Global Ratings</p>
+                    5 star
+                    <div id="ab">
+                      <div id="ab1"></div>
+                    </div>
+                    4 star
+                    <div id="ab">
+                      <div id="ab2"></div>
+                    </div>
+                    3 star
+                    <div id="ab">
+                      <div id="ab3"></div>
+                    </div>
+                    2 star
+                    <div id="ab">
+                      <div id="ab4"></div>
+                    </div>
+                    1 star
+                    <div id="ab">
+                      <div id="ab5"></div>
+                    </div>
+  
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+  
+              </button>
+  
+  
+            </div>
+            <button type="submit" id="button4"><i class="fas fa-shopping-cart"></i></svg> Add to Cart</button>
+          </div>
+          <div id="b5">
+            <img src="d5.jpeg">
+            <h3> panner Dosa</h3>
+            <h3>₹ <del style="color: red;">379</del> <span></span> 300</h3>
+            <!-- MODAL -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <b>4.2 </b> <i class="fa fa-star" style="color:#f7e305"></i>
+            </button>
+  
+  
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ratings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+  
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:grey;"></i>
+  
+                    </svg> <b>4.2 out of 5</b>
+                    <p>34,294 Global Ratings</p>
+                    5 star
+                    <div id="ab">
+                      <div id="ab1"></div>
+                    </div>
+                    4 star
+                    <div id="ab">
+                      <div id="ab2"></div>
+                    </div>
+                    3 star
+                    <div id="ab">
+                      <div id="ab3"></div>
+                    </div>
+                    2 star
+                    <div id="ab">
+                      <div id="ab4"></div>
+                    </div>
+                    1 star
+                    <div id="ab">
+                      <div id="ab5"></div>
+                    </div>
+  
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+  
+              </button>
+  
+  
+            </div>
+            <button type="submit" id="button5"><i class="fas fa-shopping-cart"></i></svg> Add to Cart</button>
+          </div>
+          <div id="b6">
+            <img
+              src="d6.jpeg">
+            <h3> Ghee Roast Dosa</h3>
+            <h3>₹ <del style="color: red;">389</del> <span></span> 350</h3>
+            <!-- MODAL -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <b>4.2 </b> <i class="fa fa-star" style="color:#f7e305"></i>
+            </button>
+  
+  
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ratings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+  
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:#f7e305"></i>
+                    <i class="fa fa-star" style="color:grey;"></i>
+  
+                    </svg> <b>4.2 out of 5</b>
+                    <p>34,294 Global Ratings</p>
+                    5 star
+                    <div id="ab">
+                      <div id="ab1"></div>
+                    </div>
+                    4 star
+                    <div id="ab">
+                      <div id="ab2"></div>
+                    </div>
+                    3 star
+                    <div id="ab">
+                      <div id="ab3"></div>
+                    </div>
+                    2 star
+                    <div id="ab">
+                      <div id="ab4"></div>
+                    </div>
+                    1 star
+                    <div id="ab">
+                      <div id="ab5"></div>
+                    </div>
+  
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+  
+              </button>
+  
+  
+            </div>
+            <button type="submit" id="button6"><i class="fas fa-shopping-cart"></i></svg> Add to Cart</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+  
+    </div>  
+  </section>
+  
+</body>
+
+</html>
